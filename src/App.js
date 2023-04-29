@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Box } from '@mui/material';
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { Box, Fab} from '@mui/material';
 
-import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './components';
-
+import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed,Liveserverlogin,Liveserverroom } from './components';
+import StreamIcon from '@mui/icons-material/Stream';
+import { Stream } from "@mui/icons-material";
 const App = () => (
-  <BrowserRouter>
+  <div>
+  <HashRouter>
     <Box sx={{ backgroundColor: '#000' }}>
       <Navbar />
       <Routes>
@@ -12,9 +14,12 @@ const App = () => (
         <Route path='/video/:id' element={<VideoDetail />} />
         <Route path='/channel/:id' element={<ChannelDetail />} />
         <Route path='/search/:searchTerm' element={<SearchFeed />} />
+        <Route path="/LiveserverLogin" element={<Liveserverlogin />}/>
+        <Route path="room/:roomid" element={<Liveserverroom />}/>
       </Routes>
     </Box>
-  </BrowserRouter>
+  </HashRouter>
+  </div>
 );
 
 export default App;
