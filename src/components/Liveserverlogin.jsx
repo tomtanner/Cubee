@@ -5,6 +5,8 @@ import StreamIcon from '@mui/icons-material/Stream';
 import { Videos, Sidebar } from "./";
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
+
+
 const Liveserverlogin = () => {
     const [selectedCategory, setSelectedCategory] = useState("New");
     const [videos, setVideos] = useState(null);
@@ -32,7 +34,7 @@ const Liveserverlogin = () => {
               <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       
               <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-                Copyright © 2022 JSM Media
+                Copyright © 2023 Cubee Made with Love by CGA
               </Typography>
             </Box>
         

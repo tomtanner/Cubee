@@ -12,7 +12,9 @@ const Feed = () => {
 
   useEffect(() => {
     setVideos(null);
-
+    if(selectedCategory=='Streaming'){
+      window.location.replace('/#/Liveserverlogin');
+    }
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
   }, [selectedCategory]);
@@ -23,7 +25,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
 
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-          Copyright © 2022 JSM Media
+          Copyright © 2023 Cubee
         </Typography>
       </Box>
   
@@ -34,9 +36,9 @@ const Feed = () => {
 
         <Videos videos={videos} />
       </Box>
-      <Link to="Liveserverlogin">    <Fab style={{ backgroundColor: 'white', color: 'white', marginTop: 300 }}>
+      {/* <Link to="Liveserverlogin">    <Fab style={{ backgroundColor: 'white', color: 'white', marginTop: 300 }}>
         <StreamIcon style={{ color: 'black' }} />
-      </Fab></Link>
+      </Fab></Link> */}
     </Stack>
   );
 };

@@ -29,14 +29,16 @@ const Liveserverroom=()=>{
                 role,
             },
         },
+// http://localhost:3000/Liveserverlogin?2&role=Audience#room/2
+// http://localhost:3000/Liveserverlogin?2&role=Audience#/room/2
         sharedLinks: [{
             name: 'Join as audience',
             url:
                 window.location.origin +
-                window.location.pathname +'Liveserverlogin'+
-                '?roomid=' +
-                roomid +
-                '&role=Audience',
+                window.location.pathname +'Liveserverlogin?'+
+                +roomid 
+                +
+                '&role=Audience'+"#/room/"+roomid
         }]
     });
     };
@@ -47,3 +49,10 @@ const Liveserverroom=()=>{
     );
 }
 export default Liveserverroom;
+
+// propercode
+// window.location.origin +
+// window.location.pathname +'Liveserverlogin'+
+// '?roomid=' +
+// roomid +
+// '&role=Audience',
