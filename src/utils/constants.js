@@ -16,7 +16,6 @@ export const logo = 'https://www.canva.com/design/DAFgprymxf0/0jdK_7F8_aXEW73GtP
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
-  { name: 'JS Mastery', icon: <CodeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
